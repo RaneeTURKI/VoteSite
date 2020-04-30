@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+{% block content %} 
+
+  <h1 class="text-center mb-3">Polls</h1>
+    {% for poll in jasonpk %}
+      <div class="card mb-3">
+        <div class="card-body">
+          <p class="lead">{{poll.poll}}</p>
+          <a href="{% url 'polls:results' poll.pollID %}" class="btn btn-secondary btn-sm">Results</a>
+        </div>
+      </div>
+    {% endfor %}
+
+{% endblock %}

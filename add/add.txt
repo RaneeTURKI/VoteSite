@@ -1,0 +1,14 @@
+email_subject = 'Voting app ID'
+            message = {
+                    'user':obj.getName() ,
+                    'domain': current_site.domain,
+                    'token': password,
+                }
+            to_email = email ,
+            email = EmailMessage(email_subject, message, to=[to_email])
+            email.send()
+
+
+
+            from django.core.mail import EmailMessage
+from django import forms
